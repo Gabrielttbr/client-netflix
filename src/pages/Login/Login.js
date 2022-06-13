@@ -1,11 +1,17 @@
 import React from 'react';
-
+import { useState } from 'react';
 // css
 import './Login.css'
 
 // Image
 import netlfix from '../../assets/netflix.png';
 function Login(){
+
+     const handleInputChange = (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        
+    }
     return(
     <div className="BodyContainer">
         
@@ -21,7 +27,7 @@ function Login(){
                         <h1 className='titleNetflix'> Entrar</h1>
                     </header>
                     <main>
-                        <form>
+                        <form  onSubmit={handleInputChange} >
                             <input type="text" placeholder="Email ou número de telefone"></input>
                             <input type="text" placeholder="Senha"></input>
                             <button type="submit" className="button-enviar">Enviar </button>
