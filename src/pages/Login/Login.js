@@ -18,13 +18,13 @@ function Login(){
             <main className="main">
                 <section>
                     <header>
-                        <h1> Entrar</h1>
+                        <h1 className='titleNetflix'> Entrar</h1>
                     </header>
                     <main>
                         <form>
                             <input type="text" placeholder="Email ou número de telefone"></input>
                             <input type="text" placeholder="Senha"></input>
-                            <button type="submit" className="buton-enviar">Enviar </button>
+                            <button type="submit" className="button-enviar">Enviar </button>
                             <a href="#" className="Precisa">Precisa de ajuda?</a>
                         </form>
                     </main>
