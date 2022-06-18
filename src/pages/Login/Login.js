@@ -6,10 +6,28 @@ import './Login.css'
 // Image
 import netlfix from '../../assets/netflix.png';
 function Login(){
+    const [Email, setEmail] = useState();
+    const [Senha, setSenha] = useState();
 
      const handleInputChange = (event) => {
         event.preventDefault();
         event.stopPropagation();
+        const bodyFront = {
+            email: Email,
+            senha: Senha
+        }
+        const requestOptions = {
+            method: "POST",
+            body: JSON.stringify(bodyFront),
+            headers: {"Content-type": "application/json; charset=UTF-8"}
+        }
+        fetch('http://localhost:4000/user/login',requestOptions)
+        .then((result) =>result.json()
+            .then((data) => console.log(data)))
+        .catch((e) => { 
+            console.log(e)
+        })
+     
         
     }
     return(
@@ -28,8 +46,8 @@ function Login(){
                     </header>
                     <main>
                         <form  onSubmit={handleInputChange} >
-                            <input type="text" placeholder="Email ou número de telefone"></input>
-                            <input type="text" placeholder="Senha"></input>
+                            <input type="text" placeholder="Email ou número de telefone" onChange={(e) => setEmail(e.target.value)}></input>
+                            <input type="password" placeholder="Senha" onChange={(e) => setSenha(e.target.value)}></input>
                             <button type="submit" className="button-enviar">Enviar </button>
                             <a href="#" className="Precisa">Precisa de ajuda?</a>
                         </form>
