@@ -5,6 +5,11 @@ import { useState } from "react";
 // Componentes 
 import { Form, Button } from "react-bootstrap";
 
+
+
+// Maks
+import { cpfMask } from "../../components/maks/cpfMaks";
+import { cepMask } from "../../components/maks/cepMaks";
 //Import css
 import "./RegisterUser.css";
 import "../Login/Login.css"
@@ -30,9 +35,24 @@ function RegisterUser() {
     event.preventDefault();
     event.stopPropagation();
     if (form.checkValidity() === true) {
-      alert('Enviar')
+      const bodyForm = {
+        nome: name,
+        email: email,
+        senha: password,
+        cpf: cpf,
+        cep: cep,
+        endereco: andress
+      }
+      const requestOptions = {
+        method: "POST",
+        body: JSON.stringify(bodyForm),
+        headers: {"Content-type": "application/json; charset=UTF-8"}
+      }
+      fetch('http://localhost:4000/user/register', requestOptions)
+      .then((response) => console.log(response.json()
+      .then((data) => console.log(data))))
+      .catch((e) => console.log(e))
     }
-
     setValidated(true);
   };
 
@@ -95,7 +115,8 @@ function RegisterUser() {
               <Form.Label>CPF</Form.Label>
               <Form.Control type="text"
                maxLength={14} minLength={14} placeholder="CPF" required
-               onChange={ (e) => setCpf(e.target.value)} />
+               onChange={ (e) => setCpf( cpfMask(e.target.value))}
+               value={cpf} />
               <Form.Control.Feedback type="invalid">
                 CPF inválido.
               </Form.Control.Feedback>
@@ -110,7 +131,8 @@ function RegisterUser() {
               <Form.Label>CEP</Form.Label>
               <Form.Control type="text" 
               maxLength={9} minLength={9} placeholder="CEP" required 
-              onChange={(e) => setCep(e.target.value)}/>
+              onChange={(e) => setCep( cepMask(e.target.value))}
+              value={cep}/>
               <Form.Control.Feedback type="invalid">
               CEP inválido.
               </Form.Control.Feedback>
