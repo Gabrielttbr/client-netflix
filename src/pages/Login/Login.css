@@ -122,7 +122,11 @@ main > section > footer > p a:hover{
     margin-right: 60px;
     margin-bottom: 20px;
 }
-
+@media screen and (max-width: 800px) {
+    main section{
+        width: 70%;
+    }
+}
      
 @media screen and (max-width: 500px) {
     .BodyContainer{
@@ -134,10 +138,9 @@ main > section > footer > p a:hover{
         height: 100%;
         background-color: black;
         padding: 10px;
+        margin: 0;
     }
-    main > section > main > form > input{
-        width: 100%;
-    }
+
     .button-enviar{
         width: 100%;
     }
