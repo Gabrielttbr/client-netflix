@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 // Componentes 
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Alert } from "react-bootstrap";
 
 
 
@@ -28,13 +28,17 @@ function RegisterUser() {
   const [cpf, setCpf ] = useState();
   const [cep, setCep ] = useState();
   const [andress, setAndress ] = useState();    
-
+  const [equalPassword, setEqualPassword] = useState(true);
 
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     event.preventDefault();
     event.stopPropagation();
+    if(confirmPassword != password){
+        return setEqualPassword(false);
+    }
     if (form.checkValidity() === true) {
+
       const bodyForm = {
         nome: name,
         email: email,
@@ -180,8 +184,15 @@ function RegisterUser() {
               <Form.Control.Feedback type="invalid">
                 Senha inválida
               </Form.Control.Feedback>
-          
             </Form.Group>
+            
+            {!equalPassword && (
+              <Alert variant='danger'>
+               password no are equal
+              </Alert>
+            )
+            }
+
             <Button type="submit" className="button-enviar">
               CADASTRAR
             </Button>
