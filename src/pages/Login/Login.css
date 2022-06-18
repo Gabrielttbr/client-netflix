@@ -29,7 +29,7 @@
 }
 main section{
     height: 660px;
-    width: 28%;
+    width: 38%;
     padding: 60px 68px 40px;
     margin: auto;
     background: rgba(0,0,0,.75);
@@ -52,7 +52,7 @@ main > section > main > form > input {
     margin:0 0 30px;
     border-radius: 4px;
     color: #fff;
-    min-height: 40px;
+    min-height: 60px;
 
 }
 main > section > main > form > a{
@@ -79,15 +79,15 @@ main > section > footer > p a:hover{
 .button-enviar{
     border-radius: 4px;
     color: #fff;
-    background-color: #E50914;
+    background-color: #E50914 !important;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center !;
     padding: 16px !important;
     margin: 24px 0px 12px !important;
-    width: 100%;
-    border: none;
-    line-height: none;
+    width: 100% !important;
+    border: none !important;
+    line-height: none !important;
 }
 .footer{
     grid-area: "footer";
