@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 // css
 import './Login.css'
 
@@ -53,7 +54,7 @@ function Login(){
                         </form>
                     </main>
                     <footer>
-                        <p>Novo por aqui? <a className="link" href="#">Assine agora.</a></p>
+                        <p>Novo por aqui? <Link to="/register">Assine agora.</Link></p>
                         <p>Esta página é protegida pelo Google reCAPTCHA para garantir que você não é um robô. Saiba mais.</p>
                     </footer>
                 </section>
