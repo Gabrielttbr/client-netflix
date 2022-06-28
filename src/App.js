@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 
-import { isAutheticed } from "./auth/auth";
+import { isAutheticed } from "./providers/auth";
 
 
 //Pages
