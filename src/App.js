@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 
-import { isAutheticed } from "./providers/auth";
+import { IsAutheticed } from "./components/authentication/auth";
 
 
 //Pages
@@ -14,7 +14,7 @@ function App() {
 
   const Routeprivate = (routa) => {
     return(
-      isAutheticed() ?
+      IsAutheticed() ?
          routa : (
           <Navigate to="/"></Navigate>
         ) 

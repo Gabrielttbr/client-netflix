@@ -14,7 +14,7 @@ import netlfix from '../../assets/netflix.png';
 import { AuthContext } from '../../providers/auth';
 function Login(){
     // eslint-disable-next-line no-unused-vars
-    const { user, setUser } = React.useContext(AuthContext)
+    const { user, setUser } = React.useContext(AuthContext);
     const [Email, setEmail] = useState();
     const [Senha, setSenha] = useState();
     const [unauthorized, setUnauthorized] = useState();
@@ -38,9 +38,11 @@ function Login(){
                 setUnauthorized(true);
                 return console.log("Email ou senha incorreto");
             }else if(response.status === 200){
+                
+             
+         
                 setUserOk(true);
-                console.log(response.json().then( (data) => { setUser(data)}) )
-                return console.log("Entrou com sucesso");
+                return    response.json().then( (data) => {setUser(data)}) 
             }
         })
         .catch((e) => { 
