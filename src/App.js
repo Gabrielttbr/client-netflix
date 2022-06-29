@@ -13,12 +13,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 function App() {
 
   const Routeprivate = (routa) => {
-    return(
-      IsAutheticed() ?
-         routa : (
-          <Navigate to="/"></Navigate>
-        ) 
-    )
+
   }
   
   return (
@@ -30,7 +25,10 @@ function App() {
         {
           // ROTAS PROTEGIDAS 
         }
-        <Route exact path="/home" element={Routeprivate(<Home/>)}>
+        <Route exact path="/home" element={ IsAutheticed() ?
+         <Home/> : (
+          <Navigate to="/"></Navigate>
+        )  }>
 
         </Route>
       </Routes>

@@ -2,7 +2,9 @@ import React from 'react';
 import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 
-
+// Components
+import Headerlogotipo from '../../components/headerlogotipo/headerlogotipo';
+import Footer from '../../components/footer/footer';
 
 // Bootstrap
 import { Alert } from 'react-bootstrap';
@@ -38,11 +40,8 @@ function Login(){
                 setUnauthorized(true);
                 return console.log("Email ou senha incorreto");
             }else if(response.status === 200){
-                
-             
-         
                 setUserOk(true);
-                return    response.json().then( (data) => {setUser(data)}) 
+                response.json().then( (data) => { setUser(data) }) 
             }
         })
         .catch((e) => { 
@@ -61,11 +60,7 @@ function Login(){
     <div className="BodyContainer">
         
         <div className="backgroundrgba">
-            <header className="header">
-                <a className="navbar-brand marginlogotipo" href='#'>
-                    <img src={netlfix} className="logotipo" alt="Logo netflix"height="45px"></img>
-                </a>
-            </header>
+            <Headerlogotipo navigate="/login" />
             <main className="main">
                 <section>
                     <header>
@@ -88,19 +83,7 @@ function Login(){
                     </footer>
                 </section>
             </main>
-            <footer className="footer">
-                <p className="TitleFooter">Dúvidas? ligue 0800 591 8942</p>
-                <div className="ListFooter">
-                    <ul>
-                        <li>Perguntas frequentes</li>
-                        <li>Privacidade</li>
-                        <li>Centro de ajuda</li>
-                        <li>Preferências de cookies</li>
-                        <li>Termos de uso</li>
-                        <li>informações comporativas</li>
-                    </ul>
-                </div>
-            </footer>
+        <Footer/>
         </div>
     </div>    
     )

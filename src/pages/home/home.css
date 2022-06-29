@@ -1,0 +1,40 @@
+.Navigate{
+    display: flex;
+    background: #000;
+    align-items: center;
+    
+}
+.containerNavigate{
+    max-width: 1024px;
+    width: 100% !important;
+    display: flex;
+    margin: auto;
+}
+.navigate-list{
+    list-style: none;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    min-height: 100%;
+}
+.navigate-link{
+    margin: 5px;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+}
+.logotipo{
+    margin: 10px;
+    
+}
+#sair{
+    float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    margin-right: 10px;
+}
