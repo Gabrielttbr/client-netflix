@@ -18,6 +18,7 @@ import './home.css';
 
 function Home(){
     return (
+    <section className="backgroundHome">
         <nav className='Navigate'>
             <div className="containerNavigate">
                 <Headerlogotipo className="logotipo"/>
@@ -37,6 +38,7 @@ function Home(){
                 </ul>
             </div>
         </nav>
+    </section>    
     );
 }
 export default Home;
