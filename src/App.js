@@ -24,15 +24,19 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        {/*==============================================================
+                          ROTAS PÚBLICAS
+        ===================================================================*/
+
+        }
         <Route exact path="/login" element={<Login />}></Route>
         <Route exact path="/Register" element={<RegisterUser />}></Route>
-
         {
-          // ROTAS PROTEGIDAS 
+          //===============================================================
+          //                      ROTAS PROTEGIDAS 
+          //===============================================================
         }
-        <Route exact path="/home" element={Routeprivate(<Home/>)}>
-
-        </Route>
+        <Route exact path="/home" element={Routeprivate(<Home/>)}></Route>
       </Routes>
     </BrowserRouter>
   );
