@@ -1,67 +1,68 @@
-.Navigate{
-    display: flex;
-    background-color: transparent !important ;
-    align-items: center;
-    z-index: 100;
-    position: fixed;
-    width: 100%;
+.pag-home{
+    margin: 0;
+    padding: 0;
 }
-.containerNavigate{
-    max-width: 1024px;
-    width: 100% !important;
-    display: flex;
+
+/* ========================================================================
+                    menu de navegação
+==========================================================================*/
+.navigation-home{
+    width:100%;
+    background: #000;
+}
+.container-navigation{
+    max-width: 1224px;
     margin: auto;
-}
-.navigate-list{
-    list-style: none;
-    display: flex;
-    width: 100%;
+    display:flex;
+    justify-content: center;
     align-items: center;
-    min-height: 100%;
+    background: rgb(228, 155, 155);
+    width: 100%;
+    height: 44px
 }
-.navigate-link{
-    margin: 5px;
-    padding: 10px;
-    color: #fff;
+.list-containers{
+    list-style: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-weight: 400;
 }
-.logotipo{
-    margin: 10px;
-    
-}
-#sair{
-    float: left;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    width: 100%;
+.rows-list{
+    margin-left: 10px;
     margin-right: 10px;
-}
-.backgroundHome{
-    background: #141414;
-    height: 100vh
-}
-
-/*===========================================*/
-/*              banner                        */
-/*===========================================*/
-.banner{
-    position: absolute;
-    top: 0;
-    width:100% !important;
-    background-repeat: no-repeat !important;
-    background-size: cover !important;
-    background-repeat: no-repeat, repeat-x !important;
-    background-position: top right, center !important;
-    height: 100vh;
+    padding: 10px;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 54px;
 }
 
-.Context-img{
-    width: 100%;
-    height:100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.096) );
-    z-index: 1;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.carousel-flex{
+    width: 200px;
+    height: 100px;
+    background: rgb(211, 209, 209);
 }

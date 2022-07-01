@@ -7,7 +7,7 @@ function Headerlogotipo({navigate}){
     return (
         <header className="header">
             <Link className="navbar-brand marginlogotipo" to="/login">
-                <img src={netlfix} className="logotipo" alt="Logo netflix"height="35px"></img>
+                <img src={netlfix} className="logotipo" alt="Logo netflix"height="44px"></img>
             </Link>
         </header>
         
