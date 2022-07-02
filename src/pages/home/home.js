@@ -38,7 +38,7 @@ function Home() {
         <div className="container-navigation">
           <Headerlogotipo></Headerlogotipo>
           <ul className="list-containers">
-            <li className="rows-list">HOME</li>
+            <li className="rows-list" id="home">HOME</li>
             <li className="rows-list">FILME</li>
             <li className="rows-list">SÉRIE</li>
             <li className="rows-list" id="sair">

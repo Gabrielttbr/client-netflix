@@ -3,6 +3,7 @@
     padding: 0;
     background-color: #141414;
     height: 180vh;
+    width: 100%;
 }
 
 /* ========================================================================
@@ -50,16 +51,19 @@
 }
 #sair{
     position: absolute;
-    right: 20px;
+    right: 40px;
+    margin: 0;
+    padding: 0;
 }
 /*========================================================
 /*                   BANNER
 /*===========================================================*/
 .img-background-jubotron{
-    height: 85vh;
+    height: 90vh;
     z-index: 0 !important;
+    background-repeat: no-repeat !important;
     background-size: cover !important;
-    background-repeat: no-repeat;
+    width: 100% !important;
 }
 .background-preto{
     height: 85vh;
@@ -133,13 +137,19 @@
     background-color: #fff;
     border-color: #ffff;
 }
+.footer{
+    background: #000!important;
+}
+footer{
+    background: #000 !important;
+}
 
 
 /*===========================================================================================
                         EDIÇÃO DO CARROSEL
 ========================================================================================*/
 .AllCarousel{
-    max-width: 100%;
+    max-width: 99%;
     position: absolute;
     top: 60vh;
     margin-left: 20px;
@@ -170,16 +180,78 @@
     width: 100%;
 }
 
+@media screen and (max-width: 958px){
+    .pag-home{
+        height: 140vh;
+    }
+    .footer-home{
+        top: 110vh;
+    }
+    .container-banner{
+        width: 80%;
+    }
+    .img-background-jubotron{
+        background-size: contain !important;
+        min-width: 100%;
+    }
+}
+@media screen and (max-width: 870px){
+    .pag-home{
+        height: 140vh;
+    }
+    .banner{    
+        height: 40vh;
+    }
+    .AllCarousel{
+        top: 60vh
+    }
+    .footer-home{
+        top: 115vh;
+    }
+
+}
+/*@media screen and (max-width: 658px){
+    .banner{
+        height: 30vh;
+    }
+    .AllCarousel{
+        top: 30vh
+    }
+    .footer-home{
+        top: 80vh;
+    }
+    .pag-home{
+        height: 100vh;
+    }   
+}*/
+
+@media screen and (max-width: 554px){
+    .container-navigation{
+        margin-left: 0;
+        margin-right: 0;
+    }
 
 
-
-
-
-
-
-
-
-
+    #home{
+        display: none !important;
+    }
+}
+@media screen and (max-width: 474px){
+    .footer-home{
+        top: 70vh;
+    }
+}
+@media screen and (max-width: 458px) {
+    .list-containers{
+        padding: 0;
+    }
+    .rows-list{
+        margin: 5px;
+    }
+    .container-banner{
+        width: 100%;
+    }
+}
 
 
 
