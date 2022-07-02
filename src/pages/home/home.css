@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     background-color: #141414;
-    height: 130vh;
+    height: 160vh;
 }
 
 /* ========================================================================
@@ -134,7 +134,12 @@
     border-color: #ffff;
 }
 
+
+/*===========================================================================================
+                        EDIÇÃO DO CARROSEL
+========================================================================================*/
 .AllCarousel{
+    max-width: 100%;
     position: absolute;
     top: 60vh;
     margin-left: 20px;
@@ -143,6 +148,14 @@
 .title-carousel{
     font-weight: 500;
     color: #fff;
+}
+.container-carousel{
+    z-index: 100;
+}
+.item {
+    width: 90%;
+    height: 50%;
+    background: #fff
 }
 
 

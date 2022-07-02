@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-
+import ReactDOM from "react-dom";
+import OwlCarousel from "react-owl-carousel";
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 
 //Components
 import Headerlogotipo from "../../components/headerlogotipo/headerlogotipo";
@@ -16,7 +19,7 @@ import "./home.css";
 
 function Home() {
   const [backActive, setBackActive] = useState();
-  let gabriel = { width: '250px'}
+  let gabriel = { width: '250px' }
   const backgroundImgemBanner = {
     background:
       "url('https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYz0BsIbkTitfbZ2lfSNdsbTtobA0tSeZ71KtMUfA8nQmPE3OzVn_YXT2cpukunsgXi9H66aY0c017hJRNZIIvTi_Ou7A5acIBIG.jpg?r=233')",
@@ -29,9 +32,8 @@ function Home() {
   return (
     <section className="pag-home">
       <nav
-        className={`navigation-home ${
-          backActive === true ? "background-black" : ""
-        }`}
+        className={`navigation-home ${backActive === true ? "background-black" : ""
+          }`}
       >
         <div className="container-navigation">
           <Headerlogotipo></Headerlogotipo>
@@ -87,58 +89,53 @@ function Home() {
       </section>
       <section className="AllCarousel">
         <main className="container-carousel">
+          <h1 className="title-carousel">Filmes</h1>
           <div className="carousel">
-            <h1 className="title-carousel">Filmes</h1>
-            <div className="owl-carousel owl-theme">
-              <div className="item" style={gabriel}>
-                <h4>1</h4>
+            <OwlCarousel className="owl-theme" loop margin={2} nav>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRIBA-82BJ57vACFUC-hoNgAny5reQGuqiMwWiPtieNmIIly9DAZBLhOfli0L5LfdobsbFueTp1Nbq6zRvDVfmt0OrGY360DISv59xayZExuW7vAmRVKZ_xu79q91mx7d1YQhmnRbKgjBGRHNQ3aR7llEJn-q7zga9Wj8zU99RfzWaovtLRR2JwsPwW7tHAKeepHYZxPNzyI9XiztpzQkOCrpvHWwCiV.jpg?r=07chttps://st2.depositphotos.com/6544740/9337/i/600/depositphotos_93376372-stock-photo-sunset-over-sea-pier.jpg" />
               </div>
-              <div className="item" style={gabriel}>
-                <h4>2</h4>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRIBA-82BJ57vACFUC-hoNgAny5reQGuqiMwWiPtieNmIIly9DAZBLhOfli0L5LfdobsbFueTp1Nbq6zRvDVfmt0OrGY360DISv59xayZExuW7vAmRVKZ_xu79q91mx7d1YQhmnRbKgjBGRHNQ3aR7llEJn-q7zga9Wj8zU99RfzWaovtLRR2JwsPwW7tHAKeepHYZxPNzyI9XiztpzQkOCrpvHWwCiV.jpg?r=07chttps://st2.depositphotos.com/6544740/9337/i/600/depositphotos_93376372-stock-photo-sunset-over-sea-pier.jpg" />
               </div>
-              <div className="item" style={gabriel}>
-                <h4>3</h4>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfe0Y8L7eTPPx4wixk_-srvTvUMbtVJblbanPzYyp1OlKVMS3tBtGpBk4njE4riYQ05Kxvss6XE3Yi6zqHNoivDoJP0luXkP8p7ZrZUvpO6frsRSj_D637swI4kQw0SP3gdi.jpg?r=254" />
+
               </div>
-              <div className="item" style={gabriel}>
-                <h4>4</h4>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQ2eejwOmFWqyOd0caBviCBDM1tWDBRunzwQDiD-3eeBNp7Wy-dCxxPsm5zxpuSRyh5E0gZAejeJp20KYnrJZefTBkyGu9etx2k.webp?r=01d" />
+
               </div>
-              <div className="item" style={gabriel}>
-                <h4>6</h4>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWbHVPZM2toXgSTWwRo5_vL5_El8zWzMog03vDJq94Yhs02Kvdzyoi53Vy5BkWkXQWvm6zcFNHlU-CTqhGI45Kxr2quOmJM10wLT51u8dq9JhFtzE2kEg2j959Fz9X3YU1bS.jpg?r=696" />
+
               </div>
-              <div className="item" style={gabriel}>
-                <h4>7</h4>
-              </div>
-              <div className="item" style={gabriel}>
-                <h4>8</h4>
-              </div>
-              <div className="item" style={gabriel}>
-                <h4>9</h4>
-              </div>
-              <div className="item" style={gabriel}>
-                <h4>10</h4>
-              </div>
-              <div className="item" style={gabriel}>
-                <h4>11</h4>
-              </div>
-              <div className="item" style={gabriel}>
-                <h4>12</h4>
-              </div>
-              <div className="item" style={gabriel}>
-                <h4>13</h4>
-              </div>
-              <div className="item" style={gabriel}>
-                <h4>14</h4>
-              </div>
-              <div className="item" style={gabriel}>
-                <h4>15</h4>
-              </div>
-            </div>
+            </OwlCarousel>
           </div>
         </main>
         <main className="container-carousel">
+          <h1 className="title-carousel">Séries</h1>
           <div className="carousel">
-            <h1 className="title-carousel">Séries</h1>
-            <div className="carousel-flex"></div>
+            <OwlCarousel className="owl-theme" loop margin={2} nav>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRIBA-82BJ57vACFUC-hoNgAny5reQGuqiMwWiPtieNmIIly9DAZBLhOfli0L5LfdobsbFueTp1Nbq6zRvDVfmt0OrGY360DISv59xayZExuW7vAmRVKZ_xu79q91mx7d1YQhmnRbKgjBGRHNQ3aR7llEJn-q7zga9Wj8zU99RfzWaovtLRR2JwsPwW7tHAKeepHYZxPNzyI9XiztpzQkOCrpvHWwCiV.jpg?r=07chttps://st2.depositphotos.com/6544740/9337/i/600/depositphotos_93376372-stock-photo-sunset-over-sea-pier.jpg" />
+              </div>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRIBA-82BJ57vACFUC-hoNgAny5reQGuqiMwWiPtieNmIIly9DAZBLhOfli0L5LfdobsbFueTp1Nbq6zRvDVfmt0OrGY360DISv59xayZExuW7vAmRVKZ_xu79q91mx7d1YQhmnRbKgjBGRHNQ3aR7llEJn-q7zga9Wj8zU99RfzWaovtLRR2JwsPwW7tHAKeepHYZxPNzyI9XiztpzQkOCrpvHWwCiV.jpg?r=07chttps://st2.depositphotos.com/6544740/9337/i/600/depositphotos_93376372-stock-photo-sunset-over-sea-pier.jpg" />
+              </div>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfe0Y8L7eTPPx4wixk_-srvTvUMbtVJblbanPzYyp1OlKVMS3tBtGpBk4njE4riYQ05Kxvss6XE3Yi6zqHNoivDoJP0luXkP8p7ZrZUvpO6frsRSj_D637swI4kQw0SP3gdi.jpg?r=254" />
+
+              </div>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQ2eejwOmFWqyOd0caBviCBDM1tWDBRunzwQDiD-3eeBNp7Wy-dCxxPsm5zxpuSRyh5E0gZAejeJp20KYnrJZefTBkyGu9etx2k.webp?r=01d" />
+
+              </div>
+              <div className="item">
+                <img src="https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWbHVPZM2toXgSTWwRo5_vL5_El8zWzMog03vDJq94Yhs02Kvdzyoi53Vy5BkWkXQWvm6zcFNHlU-CTqhGI45Kxr2quOmJM10wLT51u8dq9JhFtzE2kEg2j959Fz9X3YU1bS.jpg?r=696" />
+
+              </div>
+            </OwlCarousel>
           </div>
         </main>
       </section>
