@@ -2,14 +2,19 @@
     margin: 0;
     padding: 0;
     background-color: #141414;
+    height: 130vh;
 }
 
 /* ========================================================================
                     menu de navegação
 ==========================================================================*/
+.background-black{
+    background: #141414 !important;
+    padding: 10px;
+}
 .navigation-home{
     width:100%;
-    background: transparent !important;
+    background: transparent ;
     z-index: 3 !important;
     position: fixed;
     top: 0;
@@ -129,8 +134,16 @@
     border-color: #ffff;
 }
 
-
-
+.AllCarousel{
+    position: absolute;
+    top: 60vh;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.title-carousel{
+    font-weight: 500;
+    color: #fff;
+}
 
 
 

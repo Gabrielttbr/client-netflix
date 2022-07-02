@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+
 
 //Components
 import Headerlogotipo from "../../components/headerlogotipo/headerlogotipo";
@@ -14,15 +15,24 @@ import { AuthContext } from "../../providers/auth";
 import "./home.css";
 
 function Home() {
+  const [backActive, setBackActive] = useState();
+  let gabriel = { width: '250px'}
   const backgroundImgemBanner = {
-    background:"url('https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYz0BsIbkTitfbZ2lfSNdsbTtobA0tSeZ71KtMUfA8nQmPE3OzVn_YXT2cpukunsgXi9H66aY0c017hJRNZIIvTi_Ou7A5acIBIG.jpg?r=233')",
+    background:
+      "url('https://occ-0-1306-2430.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABYz0BsIbkTitfbZ2lfSNdsbTtobA0tSeZ71KtMUfA8nQmPE3OzVn_YXT2cpukunsgXi9H66aY0c017hJRNZIIvTi_Ou7A5acIBIG.jpg?r=233')",
+  };
+  document.addEventListener("scroll", (e) => {
+    setBackActive(true);
+  });
 
-  }
-      
 
   return (
     <section className="pag-home">
-      <nav className="navigation-home">
+      <nav
+        className={`navigation-home ${
+          backActive === true ? "background-black" : ""
+        }`}
+      >
         <div className="container-navigation">
           <Headerlogotipo></Headerlogotipo>
           <ul className="list-containers">
@@ -35,7 +45,10 @@ function Home() {
           </ul>
         </div>
       </nav>
-      <div className="img-background-jubotron"style={backgroundImgemBanner}></div>
+      <div
+        className="img-background-jubotron"
+        style={backgroundImgemBanner}
+      ></div>
       <div className="background-preto"></div>
       <section className="banner">
         <div className="container-banner">
@@ -59,7 +72,6 @@ function Home() {
             <button className="button-information">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-         
                 height="30"
                 fill="currentColor"
                 class="bi bi-info-circle"
@@ -73,18 +85,63 @@ function Home() {
           </div>
         </div>
       </section>
-      <main className="container-carousel">
-        <div className="carousel">
-          <h1 className="title-carousel">Filmes</h1>
-          <div className="carousel-flex"></div>
-        </div>
-      </main>
-      <main className="container-carousel">
-        <div className="carousel">
-          <h1 className="title-carousel">Séries</h1>
-          <div className="carousel-flex"></div>
-        </div>
-      </main>
+      <section className="AllCarousel">
+        <main className="container-carousel">
+          <div className="carousel">
+            <h1 className="title-carousel">Filmes</h1>
+            <div className="owl-carousel owl-theme">
+              <div className="item" style={gabriel}>
+                <h4>1</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>2</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>3</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>4</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>6</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>7</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>8</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>9</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>10</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>11</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>12</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>13</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>14</h4>
+              </div>
+              <div className="item" style={gabriel}>
+                <h4>15</h4>
+              </div>
+            </div>
+          </div>
+        </main>
+        <main className="container-carousel">
+          <div className="carousel">
+            <h1 className="title-carousel">Séries</h1>
+            <div className="carousel-flex"></div>
+          </div>
+        </main>
+      </section>
     </section>
   );
 }
