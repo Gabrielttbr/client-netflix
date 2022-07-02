@@ -6,7 +6,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 
 //Components
 import Headerlogotipo from "../../components/headerlogotipo/headerlogotipo";
-
+import Footer from "../../components/footer/footer";
 //Components
 import { Link } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
@@ -139,6 +139,9 @@ function Home() {
           </div>
         </main>
       </section>
+      <div className="footer-home">
+        <Footer />
+      </div>
     </section>
   );
 }
