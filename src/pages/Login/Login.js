@@ -41,7 +41,10 @@ function Login(){
                 return console.log("Email ou senha incorreto");
             }else if(response.status === 200){
                 setUserOk(true);
-                response.json().then( (data) => { setUser(data) }) 
+                response.json().then( (data) => { 
+                    localStorage.setItem('token', data.token) 
+                    setUser(data)
+                }) 
             }
         })
         .catch((e) => { 
