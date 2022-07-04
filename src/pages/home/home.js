@@ -7,7 +7,7 @@ import "owl.carousel/dist/assets/owl.theme.default.css";
 //Components
 import Headerlogotipo from "../../components/headerlogotipo/headerlogotipo";
 import Footer from "../../components/footer/footer";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { Carousel } from "react-bootstrap";
 
 // Auth
@@ -84,9 +84,19 @@ function Home() {
       .catch((error) => console.log("error", error));
   }, []);
 
+  const sairUser = async () => {
+    await localStorage.setItem('token', '');
+    await setUser({});
+    return(
+      <Navigate to="/login"></Navigate>
+    )
+  }
+
   const backgroundImgemBanner = {
     background: `url(${UrlBackground})`,
   };
+
+  // Dispara o background do menu
   document.addEventListener("scroll", (e) => {
     setBackActive(true);
   });
@@ -107,7 +117,7 @@ function Home() {
               </li>
               <li className="rows-list">FILME</li>
               <li className="rows-list">SÉRIE</li>
-              <li className="rows-list" id="sair">
+              <li className="rows-list" id="sair" onClick={sairUser}>
                 SAIR
               </li>
             </ul>
