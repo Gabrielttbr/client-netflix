@@ -58,7 +58,6 @@ function Login(){
             <Navigate to='/home'></Navigate>
         )
     }
-    console.log(user)
     return(
     <div className="BodyContainer">
         

@@ -27,7 +27,7 @@ function App() {
         }
         <Route exact path="/home" element={ IsAutheticed() ?
          <Home/> : (
-          <Navigate to="/"></Navigate>
+          <Navigate to="/login"></Navigate>
         )  }>
 
         </Route>
