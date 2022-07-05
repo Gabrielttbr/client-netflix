@@ -1,31 +1,31 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
 import OwlCarousel from "react-owl-carousel";
-import "owl.carousel/dist/assets/owl.carousel.css";
-import "owl.carousel/dist/assets/owl.theme.default.css";
+import { Navigate } from "react-router-dom";
 
-//Components
+//COMPONENTES
 import Headerlogotipo from "../../components/headerlogotipo/headerlogotipo";
 import Footer from "../../components/footer/footer";
-import { Link, Navigate } from "react-router-dom";
-import { Carousel } from "react-bootstrap";
-
-// Auth
+// AUTHETICATION
 import { AuthContext } from "../../providers/auth";
-
-// css
+// CSS
+import "owl.carousel/dist/assets/owl.carousel.css";
+import "owl.carousel/dist/assets/owl.theme.default.css";
 import "./home.css";
 
 function Home() {
+  const { user, setUser } = React.useContext(AuthContext);
   const [banner, setBanner] = useState();
   const [filme, setFilme] = useState([]);
   const [serie, setSerie] = useState([]);
-  const { user, setUser } = React.useContext(AuthContext);
   const [UrlBackground, setUrlBackground] = useState();
   const [backActive, setBackActive] = useState();
 
+
+  //================================================================
+  //                    REQUEST FILME
+  //================================================================
+
   useEffect(() => {
-    // REQUEST DO FILME
     let myHeadersFilme = new Headers();
     myHeadersFilme.append(
       "Authorization",
@@ -44,6 +44,9 @@ function Home() {
       })
       .catch((error) => console.log("error", error));
   }, []);
+  //=================================================================
+  //                      REQUEST BANNER
+  //=================================================================
   useEffect(() => {
     // REQUEST DO BANNER
     let myHeaders = new Headers();
@@ -64,8 +67,10 @@ function Home() {
       })
       .catch((error) => console.log("error", error));
   }, []);
+  //====================================================================================
+  //                           REQUEST SERIES
+  //=====================================================================================
   useEffect(() => {
-    // REQUEST SERIES
     let myHeaders = new Headers();
     myHeaders.append(
       "Authorization",
@@ -84,6 +89,11 @@ function Home() {
       .catch((error) => console.log("error", error));
   }, []);
 
+  //==============================================================
+  //      FUNÇÃO RESPONSÁVEL POR DESLOGAR O USUÁRIO.
+  //      NELA E RESETADO TODO O LOCALSTORE DO TOKEN.
+  //      ELA SETA O CONTEXTO DO USUÁRIO COMO OBIJETO VÁZIO.
+  //==========================================================
   const sairUser = async () => {
     await localStorage.setItem('token', '');
     await setUser({});
@@ -92,15 +102,24 @@ function Home() {
     )
   }
 
+  
+  // ==================================================================
+  //      FUNÇÃO RESPONSÁVEL POR OBSERVAR O EVENTO SCRUM.
+  //      TODAVIA QUE O EVENTO E DISPARADO ELE SETA O BACKGROUND DO MENU
+  // ===================================================================     
+  document.addEventListener("scroll", (e) => {
+    setBackActive(true);
+  });
+  // ===============================================================
+  //             ESSA VARIÁVEL SETA O BACKGROUND DO banner
+  // ===============================================================
   const backgroundImgemBanner = {
     background: `url(${UrlBackground})`,
   };
 
-  // Dispara o background do menu
-  document.addEventListener("scroll", (e) => {
-    setBackActive(true);
-  });
-
+  // ===============================================================================
+  //      CONDIÇÃO RESPONSÁVEL POR VERIFICAR SE OCORREU TODAS AS REQUISIÇÕES
+  // ================================================================================= 
   if (filme != undefined && banner != undefined && serie != undefined) {
     return (
       <section className="pag-home">
@@ -115,8 +134,8 @@ function Home() {
               <li className="rows-list" id="home">
                 HOME
               </li>
-              <li className="rows-list">FILME</li>
-              <li className="rows-list">SÉRIE</li>
+              <li className="rows-list"><a className="link-carrousel" href="#Filme">FILME</a></li>
+              <li className="rows-list"><a className="link-carrousel" href="#Serie">SÉRIE</a></li>
               <li className="rows-list" id="sair" onClick={sairUser}>
                 SAIR
               </li>
@@ -160,7 +179,7 @@ function Home() {
           </div>
         </section>
         <section className="AllCarousel">
-          <main className="container-carousel">
+          <main className="container-carousel" id="Filme">
             <h1 className="title-carousel">Filmes</h1>
             <div className="carousel">
               <OwlCarousel className="owl-theme" loop margin={2} nav>
@@ -172,7 +191,7 @@ function Home() {
               </OwlCarousel>
             </div>
           </main>
-          <main className="container-carousel">
+          <main className="container-carousel" id="Serie">
             <h1 className="title-carousel">Séries</h1>
             <div className="carousel">
               <OwlCarousel className="owl-theme" loop margin={2} nav>

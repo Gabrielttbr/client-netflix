@@ -167,7 +167,13 @@ footer{
     height: 50%;
     background: #fff
 }
-
+.link-carrousel{
+    text-decoration: none;
+    color: #fff;
+}
+.link-carrousel:hover{
+    color: #fff;
+}
 
 /*===================================================*/
 /*          fotter
