@@ -1,30 +1,26 @@
-import React from 'react';
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
-
-// Components
+import { Alert } from 'react-bootstrap';
+// COMPONENTES
 import Headerlogotipo from '../../components/headerlogotipo/headerlogotipo';
 import Footer from '../../components/footer/footer';
-
-// Bootstrap
-import { Alert } from 'react-bootstrap';
-// css
+// CSS
 import './Login.css'
-
-// Image
-import netlfix from '../../assets/netflix.png';
+// AUTHENTICATION
 import { AuthContext } from '../../providers/auth';
 function Login(){
-    // eslint-disable-next-line no-unused-vars
     const { user, setUser } = React.useContext(AuthContext);
     const [Email, setEmail] = useState();
     const [Senha, setSenha] = useState();
     const [unauthorized, setUnauthorized] = useState();
     const [userOk, setUserOk ] = useState();
-    
+    //=================================================================
+    //        FUNÇÃO RESPONSÁVEL POR ENVIAR O POST DO FORM 
+    //=================================================================
      const handleInputChange = (event) => {
         event.preventDefault();
         event.stopPropagation();
+        // OBJETO COM OS VALORES DO CAMPO DO INPUTS DO FORM 
         const bodyFront = {
             email: Email,
             senha: Senha
@@ -50,9 +46,10 @@ function Login(){
         .catch((e) => { 
             console.log(e)
         })
-     
-        
     }
+    //==========================================================================================
+    //     REDIRECIONA PARA PÁGINA HOME SE O USUÁRIO FOR LOGADO COM SUCESSO
+    //==========================================================================================
     if(userOk){
         return (
             <Navigate to='/home'></Navigate>

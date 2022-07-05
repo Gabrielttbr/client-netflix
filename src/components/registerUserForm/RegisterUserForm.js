@@ -1,17 +1,13 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-// Componentes
+// COMPONENTES
 import { Form, Button, Alert } from "react-bootstrap";
-
-// Maks
+// MAKS
 import { cpfMask } from "../maks/cpfMaks";
 import { cepMask } from "../maks/cepMaks";
 
 export function RegisterUserForm() {
   const [validated, setValidated] = useState(false);
-
   const [name, setName] = useState(false);
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
