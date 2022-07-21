@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+.bg-index-apresentacao{
+    height: 100vh;
+    width: 100vw;
+    background: url('../../assets/bg-index.jpg') no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -10 !important;
+
+}
+.container-index-image{
+    position: relative;
+    z-index: 100 !important;
+    height: 100vh;
+    width: 100vw;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.menu-horizontal{
+    display: flex !important;
+    width: 100% !important;
+    background-color: aqua;
+}
+.button-entrar-apresentacao{
+    display: flex;
+}

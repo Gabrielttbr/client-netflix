@@ -5,6 +5,7 @@ import { Navigate } from "react-router-dom";
 //COMPONENTES
 import Headerlogotipo from "../../components/headerlogotipo/headerlogotipo";
 import Footer from "../../components/footer/footer";
+import Loading from "../../components/loading/loading";
 // AUTHETICATION
 import { AuthContext } from "../../providers/auth";
 // CSS
@@ -210,7 +211,7 @@ function Home() {
       </section>
     );
   } else {
-    return <p>loading...</p>;
+    return <Loading/>;
   }
 }
 export default Home;

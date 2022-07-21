@@ -60,6 +60,7 @@
 /*===========================================================*/
 .img-background-jubotron{
     height: 90vh;
+    position: absolute;
     z-index: 0 !important;
     background-repeat: no-repeat !important;
     background-size: cover !important;

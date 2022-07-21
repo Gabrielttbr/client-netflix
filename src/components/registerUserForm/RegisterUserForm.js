@@ -151,7 +151,7 @@ export function RegisterUserForm() {
             <Form.Label>ENDEREÇO</Form.Label>
             <Form.Control
               type="text"
-              maxLength={255}
+              maxLength={50}
               placeholder="endereço"
               required
               onChange={(e) => {
