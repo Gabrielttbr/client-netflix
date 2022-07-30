@@ -110,6 +110,11 @@
 .footer-Index{
     margin: 0 !important;
 }
+.not-link{
+    color: #ffff !important;
+    text-decoration: none !important;
+
+}
 @media screen and (max-width: 1024px){
     .conteudo-index{
         width: 50%;

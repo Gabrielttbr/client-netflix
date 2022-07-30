@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "react-bootstrap";
 // Import Components
+import { Link } from 'react-router-dom'
 import Footer from "../../components/footer/footer"
 import Headerlogotipo from "../../components/headerlogotipo/headerlogotipo";
 //Imgs
@@ -24,7 +25,7 @@ function index() {
           <div className="menu-horizontal-index">
             <Headerlogotipo className="logotipo-index"></Headerlogotipo>
             <Button variant="danger" className="button-entrar-apresentacao">
-              entrar
+              <Link to="/login" className="not-link">entrar</Link>
             </Button>
           </div>
           <div className="border-index">
@@ -40,7 +41,7 @@ function index() {
                 Pronto para assistir? Para criar ou reiniciar sua assinatura?.
               </p>
               <Button variant="danger" className="button-cadastrar-apresentacao">
-                Vamos começar
+                <Link to="/login" className="not-link">Vamos começar</Link>
               </Button>
             </div>
           </div>
