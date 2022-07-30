@@ -5,7 +5,7 @@ import { useState } from "react";
 // Componentes 
 import { Form, Button, Alert } from "react-bootstrap";
 import { RegisterUserForm } from '../../components/registerUserForm/RegisterUserForm'
-
+import Headerlogotipo from "../../components/headerlogotipo/headerlogotipo";
 
 // Maks
 import { cpfMask } from "../../components/maks/cpfMaks";
@@ -29,19 +29,9 @@ function RegisterUser() {
   return (
     <div className="BodyContainer containerMax">
       <div className="backgroundrgba containerMax">
-        <header className="header">
-          <a className="navbar-brand marginlogotipo" href="#">
-            <img
-              src={netlfix}
-              className="logotipo"
-              alt="Logo netflix"
-              height="45px"
-            ></img>
-          </a>
-        </header>
+          <Headerlogotipo></Headerlogotipo>
         <main className="MainRegister">
           <RegisterUserForm></RegisterUserForm>
-       
         </main>
         <footer className="footer">
           <p className="TitleFooter">Dúvidas? ligue 0800 591 8942</p>

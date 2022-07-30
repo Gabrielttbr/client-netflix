@@ -6,7 +6,7 @@ import netlfix from '../../assets/netflix.png';
 function Headerlogotipo({navigate}){
     return (
         <header className="header">
-            <Link className="navbar-brand marginlogotipo" to="/login">
+            <Link className="navbar-brand marginlogotipo" to="/">
                 <img src={netlfix} className="logotipo" alt="Logo netflix"height="44px"></img>
             </Link>
         </header>
