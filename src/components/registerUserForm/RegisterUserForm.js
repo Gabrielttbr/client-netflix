@@ -61,7 +61,7 @@ export function RegisterUserForm() {
     <div className="containerRegister">
       {!UserRegisterSucess && (
         <Form noValidate validated={validated} onSubmit={handleSubmit}>
-          <h1 className="titleNetflix"> Register User</h1>
+          <h1 className="titleNetflix"> Cadastro</h1>
           {
             //==================================================================================
             //                                    CAMPO EMAIL
@@ -71,7 +71,7 @@ export function RegisterUserForm() {
             <Form.Label>EMAIL</Form.Label>
             <Form.Control
               type="email"
-              placeholder="Enter email"
+              placeholder="Digite o email"
               minLength={9}
               maxLength={100}
               required
@@ -91,7 +91,7 @@ export function RegisterUserForm() {
             <Form.Label>NOME</Form.Label>
             <Form.Control
               type="text"
-              placeholder="Name complete please"
+              placeholder="Nome completo"
               required
               minLength={10}
               maxLength={255}
@@ -205,7 +205,7 @@ export function RegisterUserForm() {
 
           {// Verifica se a senhas digitadas são iguais
           !equalPassword && (
-            <Alert variant="danger">password no are equal</Alert>
+            <Alert variant="danger">Senhas diferentes</Alert>
           )}
           {// Verifica se o email ou cpf já foram cadastrado
             EmailCpfRegister && (
