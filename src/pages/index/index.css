@@ -34,6 +34,7 @@
     background-color: #E50914 !important;
     color: #fff !important;
     border-radius: 0 !important;
+    margin: 10px !important;
 }
 .border-index{
    
@@ -45,11 +46,13 @@
     color: #fff;
 }
 .jubotron-apresentacao{
-    width: 50vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: auto;
+    
 }
 .title-apresentacao{
     text-align: center;
@@ -71,12 +74,12 @@
     width: 100%;
     background-color: #E50914 !important;
     color: #fff !important;
-    width: 75%;
     border-radius: 0!important;
     border: none !important;
     height: 8vh;
     font-size: 20px !important;
     font-weight: 500px !important;
+    
 }
 .button-cadastrar-apresentacao:hover{
     background-color: #fa2828 !important;
@@ -113,6 +116,8 @@
 .not-link{
     color: #ffff !important;
     text-decoration: none !important;
+    width: 90%;
+    height: 100%;
 
 }
 @media screen and (max-width: 1024px){

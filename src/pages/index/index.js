@@ -40,9 +40,14 @@ function index() {
                 {" "}
                 Pronto para assistir? Para criar ou reiniciar sua assinatura?.
               </p>
-              <Button variant="danger" className="button-cadastrar-apresentacao">
-                <Link to="/login" className="not-link">Vamos começar</Link>
-              </Button>
+              <Link to="/login" className="not-link">
+                <Button
+                  variant="danger"
+                  className="button-cadastrar-apresentacao"
+                >
+                  Vamos começar
+                </Button>
+              </Link>
             </div>
           </div>
         </div>

@@ -14,6 +14,7 @@ function Login(){
     const [Senha, setSenha] = useState();
     const [unauthorized, setUnauthorized] = useState();
     const [userOk, setUserOk ] = useState();
+    const [erro500, setErro500] = useState(); 
     //=================================================================
     //        FUNÇÃO RESPONSÁVEL POR ENVIAR O POST DO FORM 
     //=================================================================
@@ -41,6 +42,8 @@ function Login(){
                     localStorage.setItem('token', data.token) 
                     setUser(data)
                 }) 
+            }else{
+                setErro500(true)
             }
         })
         .catch((e) => { 
@@ -74,6 +77,11 @@ function Login(){
                             {unauthorized && (
                                 <Alert  variant="danger">Email ou senha incorreto</Alert>
                             ) }
+                            {erro500 && (
+                                <Alert  variant="danger">Erro no servidor interno</Alert>
+                            )
+
+                            }
                         </form>
                     </main>
                     <footer>
