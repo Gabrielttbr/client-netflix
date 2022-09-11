@@ -17,7 +17,7 @@ Você precisa ter o [Node](https://nodejs.org/en/), o [Git](https://git-scm.com/
 
 ```bash
 1. Clone o repositório:
-$ git clone https://github.com/Gabrielttbr/client-netflix
+$ git clone https://github.com/Gabrielttbr/client-netflix.git
 
 2. Acesse a pasta e instale as dependências via terminal:
 $ yarn / npm install
