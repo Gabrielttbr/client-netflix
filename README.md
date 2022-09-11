@@ -23,7 +23,7 @@ $ git clone https://github.com/Gabrielttbr/client-netflix.git
 $ yarn / npm install
 
 3. Inicie a aplicação em modo de desenvolvimento:
-$ yarn dev / npm run dev
+$ yarn dev / npm run start
 
 4. O servidor será aberto em http://localhost:3000
 ```
