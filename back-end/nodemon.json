@@ -1,0 +1,12 @@
+{
+    "env": {
+        "DATABASE": "netflix",
+        "PASSWORD": "root",
+        "USER": "root",
+        "HOST": "db-flix",
+        "PORT": 4000,
+
+        "JWT_KEY": "MINHAASSINATURA"
+
+    }
+}

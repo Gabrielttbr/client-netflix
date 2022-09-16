@@ -1,36 +1,4 @@
-# Clone netflix
-
-Olá, esse projeto uma simples réplica da netflix em React, com sistema de login e registro de usuário, possuindo uma página home acessada quando o usuário está logado em sua conta. Essa página vai possuir um banner, series e filmes, todos sendo buscado da API REST , desenvolvida com express, utilizando como banco de dados o MYSQL.
-
-
-### - Tela de login
-![Página de login](./front-end/src/assets/readme/login.png)
-### - Tela de Cadastro de usuário
-![Página de registro](./front-end/src/assets/readme/registro.png)
-### - Tela de home
-![Página de registro](./front-end/src/assets/readme/home.png)
-### - Tela index
-![Página de registro](./front-end/src/assets/readme/index.png)
-
-## Como rodar o front-end?
-
-Você precisa ter o [Node](https://nodejs.org/en/), o [Git](https://git-scm.com/) e algum gerenciador de pacotes([NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/) | [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)) instalados em sua máquina.
-
-```bash
-1. Clone o repositório:
-$ git clone https://github.com/Gabrielttbr/client-netflix.git
-
-2. Acesse a pasta e instale as dependências via terminal:
-$ yarn / npm install
-
-3. Inicie a aplicação em modo de desenvolvimento:
-$ yarn start / npm run start
-
-4. O servidor será aberto em http://localhost:3000
-```
-Após realizar esse passo a passo o seu front-end Estara configurado.Agora vamos configurar o back-end
-
-## Back-end
+# API NETFLIX
 
 Essa API REST foi feita com a biblioteca Express, utilizando o MYSQL como banco de dados. Vai possuir um sistema de login e registro, a senha e criptografada. Quando o usuário logar vai gerar um JWT, para conseguir fazer as requisições do Banner, Filme, Series, que são protegidas, ou seja, precisa ser passar JWT válido para fazer.
 
@@ -154,5 +122,4 @@ Você vai precisar ter o  [Docker](https://docs.docker.com/get-docker/), e o [Gi
 
 Pronto, com docker instalado em sua máquina, fica muito mais simples configurar o ambiente, agora sua aplicação já vai estar com o mysql configurado, e com database criado, tudo isso rodando em containes.
 
-
-
+BACK-END DO PROJETO TERMINADO, AGORA É SO CONFIGURAR O  [FRONT-END](https://github.com/Gabrielttbr/client-netflix) E SER FELIZ.
